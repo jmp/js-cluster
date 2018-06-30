@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>JS Clustering Tool</title>
+        <link rel="stylesheet" href="css/tether.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <h1>JS Clustering Tool</h1>
+        </div>
+        <div id="sidebar" class="span4">
+            <div class="container">
+                <div class="form-group row">
+                    <label for="file" class="col-5 col-form-label">Dataset (.txt):</label>
+                    <div class="col">
+                        <label class="custom-file">
+                            <input type="file" id="file" class="custom-file-input">
+                            <span class="custom-file-control custom-file-name" data-content="Choose file..."></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="algorithm" class="col-4 col-form-label">Algorithm:</label>
+                    <div class="col">
+                        <select class="form-control" id="algorithm" title="Algorithm used for clustering">
+                            <option>k-means</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="num-clusters" class="col-4 col-form-label">Clusters:</label>
+                    <div class="col">
+                        <input class="form-control" type="number" value="5" min="1" id="num-clusters" title="Number of clusters in dataset">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="num-clusters" class="col-4 col-form-label">Iterations:</label>
+                    <div class="col">
+                        <input class="form-control" type="number" value="15" min="1" id="num-iterations" title="Number of iterations">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col" style="text-align: center">
+                        <button type="button" class="btn btn-lg btn-primary" id="start" title="Start clustering">Start clustering</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="main">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col">
+                        <canvas id="visualization" resize></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- External libraries -->
+        <script src="js/libraries/jquery.slim.min.js"></script>
+        <script src="js/libraries/tether.min.js"></script>
+        <script src="js/libraries/bootstrap.min.js"></script>
+        <script src="js/libraries/paper-core.min.js"></script>
+        <!-- Algorithm modules -->
+        <script src="js/algorithms/k-means.js"></script>
+        <script src="js/algorithms/random-swap.js"></script>
+        <!-- Utility modules -->
+        <script src="js/utilities/convex-hull.js"></script>
+        <!-- Main application -->
+        <script src="js/main.js"></script>
+    </body>
+</html>

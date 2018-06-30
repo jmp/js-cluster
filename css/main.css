@@ -1,0 +1,33 @@
+html {
+    margin-top: 1em;
+}
+
+h1 {
+    margin-bottom: 20pt;
+}
+
+#main {
+    margin-left: 20em;
+}
+
+#visualization {
+    width: 50vw;
+    height: 50vw;
+    border: 1px solid #999;
+}
+
+#sidebar {
+    width: 20em;
+    float: left;
+}
+
+.custom-file-name:after {
+    content: attr(data-content) !important;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: block;
+    height: 100%;
+    overflow: hidden;
+    padding: 0.5rem 1rem;
+}
